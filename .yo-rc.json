@@ -3,13 +3,16 @@
     "applicationType": "monolith",
     "baseName": "aerolineaVirtual",
     "buildTool": "maven",
+    "clientFramework": "react",
     "creationTimestamp": 1701927031317,
     "databaseType": "sql",
+    "defaultCommand": "app",
     "devDatabaseType": "mysql",
-    "entities": [],
+    "entities": ["Pasajero", "Reserva", "Vuelo", "Asiento"],
     "jhipsterVersion": "9.2.0",
     "jwtSecretKey": "MDc1OGM5NDVlMzc3ZDgxYTk2YzI5M2U5ZGE3M2UzNjBjOGRlOWQ5NTA0ODk3MWEzNjc2ZTlmYWI4N2MzYWEwOWI0MDEzZjkwNWNlNjMzNjc2N2NmMTc3ZWJlZjQwY2U1YzhmNjllMmI1MzhiMzI3MGYzZDY0OTdmYTBkZDQwODI=",
     "languages": ["en"],
+    "lastLiquibaseTimestamp": 1790135120000,
     "nativeLanguage": "en",
     "prodDatabaseType": "mysql"
   }

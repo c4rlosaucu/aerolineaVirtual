@@ -1083,14 +1083,15 @@
                                 <fileSet>
                                     <directory>${project.basedir}</directory>
                                     <includes>
-                                        <include>angular.json</include>
-                                        <include>build-plugins/**/*.*</include>
+                                        <include>.postcss.config.js</include>
                                         <include>package-lock.json</include>
                                         <include>package.json</include>
                                         <include>src/main/webapp/**/*.*</include>
                                         <include>target/classes/static/**/*.*</include>
-                                        <include>tsconfig.app.json</include>
                                         <include>tsconfig.json</include>
+                                        <include>vite.config.ts</include>
+                                        <include>vitest.config.ts</include>
+                                        <include>webpack/**/*.*</include>
                                     </includes>
                                     <excludes>
                                         <exclude>**/app/**/service-worker.js</exclude>

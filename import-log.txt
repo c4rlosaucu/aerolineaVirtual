@@ -1,0 +1,120 @@
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+                            https://www.jhipster.tech
+Welcome to JHipster v9.2.0
+
+INFO! Generating jdls aerolinea.jdl
+WARNING! The paginate option is deprecated, please use pagination instead.
+     info Generating 1 application
+ _______________________________________________________________________________________________________________
+
+  Documentation for creating an application is at https://www.jhipster.tech/creating-an-app/
+
+  Application files will be generated in folder: C:\Users\Carlos Aucu\aerolineaVirtual
+ _______________________________________________________________________________________________________________
+
+WARNING! Your Node version is not LTS (Long Term Support), use it at your own risk! JHipster does not support non-LTS releases, so if you encounter a bug, please use a LTS version first.
+WARNING!  ______________________________________________________________________________
+
+  JHipster update available: 9.4.0 (current: 9.2.0)
+
+  Run npm install -g generator-jhipster to update.
+
+ ______________________________________________________________________________
+
+     info KeyStore 'C:\Users\Carlos Aucu\aerolineaVirtual\src\main\resources\config\tls\keystore.p12' already exists. Leaving unchanged.
+- applying multi-step templates
+     info Using existing git repository.
+identical .prettierrc
+identical .prettierignore
+[32m✔[39m prettier configuration files committed to disk
+- loading translations
+- updating package.json dependencies versions
+- prettifying sonar-project.properties
+- adding package-info.java files
+- sorting pom.xml file
+identical sonar-project.properties
+identical .husky\pre-commit
+identical .devcontainer\Dockerfile
+identical pom.xml
+identical src\main\resources\banner.txt
+identical src\main\resources\logback-spring.xml
+identical src\test\resources\logback.xml
+identical src\test\resources\junit-platform.properties
+identical mvnw
+identical mvnw.cmd
+identical .mvn\wrapper\maven-wrapper.jar
+identical .mvn\wrapper\maven-wrapper.properties
+identical .mvn\jvm.config
+identical src\main\resources\i18n\messages.properties
+identical src\test\resources\i18n\messages_en.properties
+identical src\main\resources\i18n\messages_en.properties
+identical src\main\docker\config\mysql\my.cnf
+identical src\main\docker\jib\entrypoint.sh
+identical checkstyle.xml
+identical package.json
+    force .yo-rc.json
+identical src\test\resources\conf\mysql\my.cnf
+identical src\main\resources\config\liquibase\changelog\00000000000000_initial_schema.xml
+identical src\main\resources\config\liquibase\master.xml
+identical src\main\resources\config\liquibase\data\user.csv
+identical src\main\resources\config\liquibase\data\user_authority.csv
+identical src\main\resources\config\liquibase\data\authority.csv
+identical src\main\webapp\manifest.webapp
+identical src\main\webapp\content\images\jhipster_family_member_0.svg
+identical src\main\webapp\content\images\jhipster_family_member_0_head-192.png
+identical src\main\webapp\content\images\jhipster_family_member_0_head-256.png
+identical src\main\webapp\content\images\jhipster_family_member_0_head-384.png
+identical src\main\webapp\content\images\jhipster_family_member_0_head-512.png
+identical src\main\webapp\content\images\jhipster_family_member_1.svg
+identical src\main\webapp\content\images\jhipster_family_member_1_head-192.png
+identical src\main\webapp\content\images\jhipster_family_member_1_head-256.png
+identical src\main\webapp\content\images\jhipster_family_member_1_head-384.png
+identical src\main\webapp\content\images\jhipster_family_member_1_head-512.png
+identical src\main\webapp\content\images\jhipster_family_member_2.svg
+identical src\main\webapp\content\images\jhipster_family_member_2_head-192.png
+identical src\main\webapp\content\images\jhipster_family_member_2_head-256.png
+identical src\main\webapp\content\images\jhipster_family_member_2_head-384.png
+identical src\main\webapp\content\images\jhipster_family_member_2_head-512.png
+identical src\main\webapp\content\images\jhipster_family_member_3.svg
+identical src\main\webapp\content\images\jhipster_family_member_3_head-192.png
+identical src\main\webapp\content\images\jhipster_family_member_3_head-256.png
+identical src\main\webapp\content\images\jhipster_family_member_3_head-384.png
+identical src\main\webapp\content\images\jhipster_family_member_3_head-512.png
+identical src\main\webapp\content\images\logo-jhipster.png
+identical src\main\webapp\favicon.ico
+identical src\main\webapp\WEB-INF\web.xml
+identical src\main\webapp\robots.txt
+identical src\main\resources\templates\error.html
+identical webpack\logo-jhipster.png
+identical src\main\resources\config\application-dev.yml
+identical src\main\resources\config\application-secret-samples.yml
+identical src\test\resources\config\application.yml
+identical src\main\resources\templates\mail\creationEmail.html
+identical src\test\resources\templates\mail\activationEmail.html
+identical src\test\resources\templates\mail\passwordResetEmail.html
+identical src\main\docker\mysql.yml
+identical src\main\docker\jhipster-control-center.yml
+identical src\main\docker\grafana\provisioning\dashboards\dashboard.yml
+identical src\main\docker\grafana\provisioning\datasources\datasource.yml
+identical src\main\docker\prometheus\prometheus.yml
+identical src\test\resources\config\application-testdev.yml
+ conflict src\main\resources\config\application.yml
+? Overwrite src\main\resources\config\application.yml? (ynadxreiH)[68G
+[G[?25hERROR! ERROR! User force closed the prompt with SIGINT
+ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (file:///C:/Users/Carlos%20Aucu/AppData/Roaming/npm/node_modules/generator-jhipster/node_modules/@inquirer/expand/node_modules/@inquirer/core/dist/lib/create-prompt.js:72:37)
+    at Interface.emit (node:events:514:20)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1353:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:292:20)
+    at ReadStream.emit (node:events:526:24)
+    at emitKeys (node:internal/readline/utils:371:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+    at ReadStream.emit (node:events:514:20)
+    at addChunk (node:internal/streams/readable:575:12)

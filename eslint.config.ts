@@ -1,10 +1,9 @@
 import eslint from '@eslint/js';
-import angular from 'angular-eslint';
+import react from '@eslint-react/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-// For a detailed explanation, visit: https://github.com/angular-eslint/angular-eslint/blob/main/docs/CONFIGURING_FLAT_CONFIG.md
 // jhipster-needle-eslint-add-import - JHipster will add additional import here
 
 export default defineConfig(
@@ -16,7 +15,7 @@ export default defineConfig(
     },
   },
   { ignores: ['src/main/docker/'] },
-  { ignores: ['target/classes/static/', 'target/', 'src/main/webapp/swagger-ui/', 'dist/'] },
+  { ignores: ['target/classes/static/', 'target/'] },
   eslint.configs.recommended,
   {
     files: ['**/*.{js,cjs,mjs}'],
@@ -25,91 +24,64 @@ export default defineConfig(
     },
   },
   {
-    files: ['src/main/webapp/**/*.ts'],
-    extends: [...tseslint.configs.strictTypeChecked, ...tseslint.configs.stylistic, ...angular.configs.tsRecommended],
+    files: ['src/main/webapp/**/*.{ts,tsx}'],
+    extends: [...tseslint.configs.recommendedTypeChecked, react.configs['recommended-type-checked']],
     languageOptions: {
       globals: {
         ...globals.browser,
       },
       parserOptions: {
-        project: ['./tsconfig.app.json', './tsconfig.spec.json'],
+        project: ['./tsconfig.json', './tsconfig.vitest.json'],
       },
     },
-    processor: angular.processInlineTemplates,
     rules: {
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'jhi',
-          style: 'kebab-case',
-        },
-      ],
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'jhi',
-          style: 'camelCase',
-        },
-      ],
-      '@angular-eslint/relative-url-prefix': 'error',
-      '@typescript-eslint/consistent-type-definitions': 'off',
-      '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@eslint-react/exhaustive-deps': 'off',
+      '@eslint-react/use-state': 'off',
+      '@eslint-react/rules-of-hooks': 'off',
+      '@eslint-react/set-state-in-effect': 'off',
+      '@eslint-react/no-array-index-key': 'off',
       '@typescript-eslint/member-ordering': [
         'error',
         {
-          default: [
-            'public-static-field',
-            'protected-static-field',
-            'private-static-field',
-            'public-instance-field',
-            'protected-instance-field',
-            'private-instance-field',
-            'constructor',
-            'public-static-method',
-            'protected-static-method',
-            'private-static-method',
-            'public-instance-method',
-            'protected-instance-method',
-            'private-instance-method',
-          ],
+          default: ['static-field', 'instance-field', 'constructor', 'static-method', 'instance-method'],
         },
       ],
-      '@typescript-eslint/no-confusing-void-expression': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/explicit-member-accessibility': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-extraneous-class': 'off',
-      '@typescript-eslint/no-misused-spread': 'off',
-      '@typescript-eslint/no-floating-promises': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-shadow': ['error'],
-      '@typescript-eslint/no-unnecessary-condition': 'error',
-      '@typescript-eslint/no-unnecessary-type-arguments': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/prefer-nullish-coalescing': 'error',
-      '@typescript-eslint/prefer-optional-chain': 'error',
-      '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/restrict-template-expressions': 'off',
+      '@typescript-eslint/restrict-plus-operands': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/interface-name-prefix': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/unbound-method': 'off',
-      'arrow-body-style': 'error',
-      curly: 'error',
-      eqeqeq: ['error', 'always', { null: 'ignore' }],
-      'guard-for-in': 'error',
-      'no-bitwise': 'error',
-      'no-caller': 'error',
-      'no-console': ['error', { allow: ['warn', 'error'] }],
-      'no-eval': 'error',
-      'no-labels': 'error',
-      'no-new': 'error',
-      'no-new-wrappers': 'error',
-      'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
-      radix: 'error',
+      '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+      '@typescript-eslint/array-type': 'error',
+      '@typescript-eslint/no-misused-promises': 'off',
+      '@typescript-eslint/no-shadow': 'error',
       'spaced-comment': ['warn', 'always'],
+      'guard-for-in': 'error',
+      'no-labels': 'error',
+      'no-caller': 'error',
+      'no-bitwise': 'error',
+      'no-console': ['error', { allow: ['warn', 'error'] }],
+      'no-new-wrappers': 'error',
+      'no-eval': 'error',
+      'no-new': 'error',
+      'no-var': 'error',
+      radix: 'error',
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
+      'prefer-const': 'error',
+      'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
+      'default-case': 'error',
+      complexity: ['warn', 40],
+      'no-invalid-this': 'off',
     },
   },
   {
@@ -118,16 +90,6 @@ export default defineConfig(
       '@typescript-eslint/no-empty-function': 'off',
     },
   },
-  {
-    files: ['src/main/webapp/**/*.html'],
-    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
-    rules: {
-      '@angular-eslint/template/click-events-have-key-events': 'off',
-      '@angular-eslint/template/interactive-supports-focus': 'off',
-    },
-  },
   // jhipster-needle-eslint-add-config - JHipster will add additional config here
-  {
-    extends: [prettier],
-  },
+  prettier,
 );
